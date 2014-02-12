@@ -3,7 +3,8 @@ Demeteorizer
 
 CLI tool to convert a Meteor app into a "standard" Node.js application. The resulting app contains
 a package.json file with all required dependencies and can be easily ported to your own servers or
-[Node.js PAAS providers](https://github.com/joyent/node/wiki/Node-Hosting).
+[Node.js PAAS providers](https://github.com/joyent/node/wiki/Node-Hosting). The output is [more
+convenient](https://github.com/onmodulus/demeteorizer/issues/26) to use than `meteor bundle`.
 
 Demeteorizer's output is similar to `meteor bundle` except that it generates a package.json containing 
 all required dependencies. This allows you to easily run `npm install` on the destination server,
