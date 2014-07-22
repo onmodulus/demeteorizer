@@ -9,6 +9,8 @@ program
   .option('-r, --release <version>', 'The Meteor version. Defaults to latest installed.')
   .option('-t, --tarball <path>', 'Output tarball path. If specified, creates a tar.gz of demeteorized application instead of directory.')
   .option('-a, --app_name <name>', 'Value to put in the package.json name field. Defaults to the current directory name.')
+  .option('-s, --subdomain <subdomain>', 'The NodeJitsu subdomain for this app.')
+  .option('-d, --domains <domains>', 'Comma separated list of custom domains for NodeJitsu.')
   .option('-p, --prerelease', 'Ignore Meteor prerelease warnings when running bundle.', false)
   .option('-d, --debug', 'Bundle in debug mode (don\'t minify, etc).', false)
   .parse(process.argv);
@@ -18,6 +20,8 @@ var node_version = program.node_version;
 var release = program.release;
 var tarball = program.tarball;
 var appName = program.app_name;
+var subdomain = program.subdomain;
+var domains = program.domains;
 var prerelease = program.prerelease;
 var debug = program.debug;
 
@@ -41,7 +45,7 @@ demeteorizer.on('progress', function(msg) {
   console.log(msg);
 });
 
-demeteorizer.convert(input, output, node_version, release, tarball, appName, prerelease, debug, function(err) {
+demeteorizer.convert(input, output, node_version, release, tarball, appName, subdomain, domains, prerelease, debug, function(err) {
   if(err) {
     console.log('ERROR: ' + err);
   }
