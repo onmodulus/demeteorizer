@@ -27,3 +27,18 @@ projects.forEach(function(project) {
     })
   })
 });
+
+
+// Test filterDep
+
+// Test filterDep for '0.0.0' and '0.0.0-unreleaseable'
+['0.0.0','0.0.0-unreleaseable', undefined].forEach(function(ver){
+  describe('Invalid Dep Version', function(){
+    describe(ver, function(){
+      it('should return null', function(done){
+        assert(demeteorizer.filterDep('somepackage', ver) === null);
+        done();
+      });
+    });
+  });
+});
