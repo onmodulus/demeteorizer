@@ -46,6 +46,7 @@ demeteorizer.convert(
   function (err) {
     if (err) {
       console.log('Demeteorization failed:', err.message || err);
+      console.trace();
       process.exit(1);
     } else {
       console.log('Demeteorization complete.');
