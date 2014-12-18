@@ -145,6 +145,8 @@ describe('demeteorizer lib', function () {
         .equal('.demeteorized/server/server.js');
       test.package_json.should
         .equal('.demeteorized/package.json');
+      test.dockerfile.should
+        .equal('.demeteorized/Dockerfile');
       test.server.should
         .equal('.demeteorized/programs/server/boot.js');
     });

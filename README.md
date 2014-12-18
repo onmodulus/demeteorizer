@@ -26,6 +26,7 @@ compiled modules.
     -r, --release <version>       The Meteor version. Defaults to latest installed.
     -t, --tarball <path>          Output tarball path. If specified, creates a tar.gz of demeteorized application instead of directory.
     -a, --app_name <name>         Value to put in the package.json name field. Defaults to the current directory name.
+    -D, --Dockerfile <file>       Add the specified Dockerfile to the output directory.
     -d, --debug                   Bundle in debug mode (don't minify, etc).
 
 ## Meteor 0.8.1 and Below

@@ -4,7 +4,7 @@
   "keywords": [
     "meteor"
   ],
-  "version": "2.0.4",
+  "version": "2.1.0",
   "author": "Modulus <support@modulus.io>",
   "maintainers": [
     "Brandon Cannaday <brandon@modulus.io>",
@@ -15,7 +15,8 @@
     "Bret Fisher <me@bfish.us>",
     "Matt Hernandez <matt@modulus.io>",
     "Tarang Patel <t@ran.gg>",
-    "Vincil Bishop <vincil.bishop@Vbishop.com>"
+    "Vincil Bishop <vincil.bishop@Vbishop.com>",
+    "Daniel Dent (https://www.danieldent.com/)"
   ],
   "license": "MIT",
   "repository": {
