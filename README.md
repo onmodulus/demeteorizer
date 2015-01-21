@@ -1,3 +1,8 @@
+DEPRECATION NOTICE
+============
+
+This repository is a fork of upstream with a patch for Dockerfile support. It was created for https://github.com/danieldent/docker-meteor, which no longer requires demeteorizer. This repository will no longer be maintained.
+
 Demeteorizer
 ============
 
