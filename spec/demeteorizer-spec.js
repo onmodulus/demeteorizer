@@ -160,7 +160,7 @@ describe('demeteorizer lib', function () {
 
       demeteorizer.bundle(context, function () {
         cpStub.exec
-          .calledWith('cd  && mrt bundle --debug --release 0.9.x --directory .demeteorized')
+          .calledWith('cd  && meteor build --debug --release 0.9.x --directory .demeteorized')
           .should.be.true;
       });
     });
@@ -226,5 +226,17 @@ describe('demeteorizer lib', function () {
 
       demeteorizer.createPackageJSON(context, new Function());
     });
+
+  /*  it('should add user-defined arbitrary JSON to package.json', function () {
+      fsStub.readFileSync = function () { throw new Error('ENOENT'); };
+
+      fsStub.writeFileSync = function (path, data) {
+        path.should.equal('./package.json');
+        JSON.parse(data).engines.node.should.exist;
+        JSON.parse(data).engines.node.should.equal('0.10.33');
+      };
+
+      demeteorizer.createPackageJSON(context, new Function());
+    });*/
   });
 });
