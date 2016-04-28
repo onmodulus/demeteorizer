@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const Path = require('path');
+const Fs = require('fs');
 const Program = require('commander');
 
 const Demteorizer = require('../lib/demeteorizer');
@@ -22,11 +23,19 @@ Program
   .option(
     '-j, --json <json>',
     'JSON data to be merged into the generated package.json')
+  .option(
+    '-J, --json-file <jsonFile>'
+    'JSON file to be merged into the generated package.json')
   .parse(process.argv);
 
 console.log('Demeteorizing application...');
 
 Program.output = Program.output || Path.join(process.cwd(), '.demeteorized');
+
+if(Program.jsonFile) {
+  Program.json = Fs.readFileSync(Path.resolve(Program.jsonFile));
+}
+
 Program.json = Program.json || '{}';
 
 try {
