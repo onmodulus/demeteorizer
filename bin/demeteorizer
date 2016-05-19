@@ -22,6 +22,12 @@ Program
   .option(
     '-j, --json <json>',
     'JSON data to be merged into the generated package.json')
+  .option(
+    '-v, --verbose',
+    'Output extra build information')
+  .option(
+    '-s, --server <location>',
+    'Remote DDP Server location')
   .parse(process.argv);
 
 console.log('Demeteorizing application...');
@@ -42,7 +48,9 @@ var options = {
   input: process.cwd(),
   directory: Program.output,
   json: Program.json,
-  architecture: Program.architecture
+  architecture: Program.architecture,
+  verbose: Boolean(Program.verbose),
+  server: Program.server || "localhost:3000"
 };
 
 Demteorizer(options, function (err) {
