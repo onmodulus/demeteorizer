@@ -27,7 +27,7 @@ Program
     'Output extra build information')
   .option(
     '-s, --server <location>',
-    'Remote DDP Server location')
+    'Remote DDP Server location, default to [localhost:3000]')
   .parse(process.argv);
 
 console.log('Demeteorizing application...');
@@ -50,7 +50,7 @@ var options = {
   json: Program.json,
   architecture: Program.architecture,
   verbose: Boolean(Program.verbose),
-  server: Program.server || "localhost:3000"
+  server: Program.server
 };
 
 Demteorizer(options, function (err) {
