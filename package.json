@@ -1,6 +1,6 @@
 {
-  "name": "demeteorizer-extra",
-  "description": "Fork of origin demeteorizer",
+  "name": "demeteorizer",
+  "description": "Converts a Meteor app into a \"standard\" Node.js application.",
   "keywords": [
     "meteor"
   ],
