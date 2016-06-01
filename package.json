@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "code": "1.x.x",
-    "lab": "5.x.x",
+    "lab": "10.7.1",
     "proxyquire": "1.7.1",
     "sinon": "1.16.1",
     "eslint": "2.11.1",
