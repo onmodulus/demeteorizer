@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "commander": "2.8.1",
-    "hoek": "2.x.x",
+    "hoek": "4.0.1",
     "win-spawn": "2.0.0"
   },
   "devDependencies": {
