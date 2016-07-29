@@ -28,7 +28,7 @@
     "cross-spawn": "3.0.1"
   },
   "devDependencies": {
-    "code": "2.x.x",
+    "code": "3.0.1",
     "lab": "10.x.x",
     "proxyquire": "1.7.10",
     "sinon": "1.17.5",
