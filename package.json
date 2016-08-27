@@ -35,7 +35,7 @@
     "eslint": "2.11.1",
     "eslint-plugin-hapi": "4.0.0",
     "eslint-plugin-promise": "1.1.0",
-    "eslint-config-modulus": "0.6.0"
+    "eslint-config-modulus": "2.0.0"
   },
   "scripts": {
     "test": "lab --threshold 100 --lint",
